@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'bar.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(368, 269)
+        self.setFixedSize(368, 269)
+
+        self.layoutWidget = QtWidgets.QWidget(Dialog)
+        self.layoutWidget.setGeometry(QtCore.QRect(20, 30, 331, 181))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.formLayout = QtWidgets.QFormLayout(self.layoutWidget)
+        self.formLayout.setContentsMargins(0, 0, 0, 0)
+        self.formLayout.setObjectName("formLayout")
+        self.label = QtWidgets.QLabel(self.layoutWidget)
+        self.label.setObjectName("label")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
+        self.lineEdit = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit.setObjectName("lineEdit")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.lineEdit)
+        self.label_4 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_4.setObjectName("label_4")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_4)
+        self.comboBox_2 = QtWidgets.QComboBox(self.layoutWidget)
+        self.comboBox_2.setObjectName("comboBox_2")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.comboBox_2)
+        self.label_2 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_2.setObjectName("label_2")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_2)
+        self.comboBox = QtWidgets.QComboBox(self.layoutWidget)
+        self.comboBox.setObjectName("comboBox")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.comboBox)
+        self.label_3 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_3.setObjectName("label_3")
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.lineEdit_2)
+        self.label_5 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_5.setObjectName("label_5")
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.LabelRole, self.label_5)
+        self.pushButton_3 = QtWidgets.QPushButton(self.layoutWidget)
+        self.pushButton_3.setText("")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.pushButton_3)
+        self.label_6 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_6.setObjectName("label_6")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_6)
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.lineEdit_3)
+        self.label_7 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_7.setObjectName("label_7")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_7)
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.lineEdit_4)
+        self.layoutWidget1 = QtWidgets.QWidget(Dialog)
+        self.layoutWidget1.setGeometry(QtCore.QRect(60, 230, 231, 25))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget1)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.pushButton = QtWidgets.QPushButton(self.layoutWidget1)
+        self.pushButton.setObjectName("pushButton")
+        self.horizontalLayout.addWidget(self.pushButton)
+        self.pushButton_2 = QtWidgets.QPushButton(self.layoutWidget1)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.setWindowIcon(QIcon(r'Z:\Data_Visualization\venv\qrc\icons\icon.png'))
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.label.setText(_translate("Dialog", "命名："))
+        self.label_4.setText(_translate("Dialog", "数据集："))
+        self.label_2.setText(_translate("Dialog", "分类选择："))
+        self.label_3.setText(_translate("Dialog", "分类依据："))
+        self.label_5.setText(_translate("Dialog", "颜色选择："))
+        self.label_6.setText(_translate("Dialog", "x轴标签："))
+        self.label_7.setText(_translate("Dialog", "y轴标签："))
+        self.pushButton.setText(_translate("Dialog", "绘制"))
+        self.pushButton_2.setText(_translate("Dialog", "取消"))

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1068</width>
+    <height>737</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="DataTableWidget" name="pandastablewidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>711</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>120</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>将文件拖拽到此处读取</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>390</y>
+      <width>321</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>数据基本描述：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="tableView"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>30</y>
+      <width>321</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>异常数据显示:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="tableView_2"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1068</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuSave_as">
+     <property name="title">
+      <string>Save as..</string>
+     </property>
+     <addaction name="actionas_a_Csv_File"/>
+     <addaction name="separator"/>
+     <addaction name="actionas_a_Excel_file"/>
+    </widget>
+    <addaction name="actionOpen_file"/>
+    <addaction name="separator"/>
+    <addaction name="menuSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuQuick_operation">
+    <property name="title">
+     <string>Quick operation</string>
+    </property>
+    <addaction name="actionDelete_problematic_rows"/>
+    <addaction name="separator"/>
+    <addaction name="actionDelete_problematic_columns"/>
+    <addaction name="separator"/>
+    <addaction name="actionDelete_duplicate_values"/>
+    <addaction name="separator"/>
+    <addaction name="actionFill_problematic_columns_with"/>
+    <addaction name="separator"/>
+    <addaction name="actionForced_type_Conversion"/>
+    <addaction name="separator"/>
+    <addaction name="actionUpdating_all_the_Windows"/>
+   </widget>
+   <widget class="QMenu" name="menuSelect">
+    <property name="title">
+     <string>Selection</string>
+    </property>
+    <addaction name="actionread_only"/>
+    <addaction name="separator"/>
+    <addaction name="actioninplace"/>
+   </widget>
+   <widget class="QMenu" name="menuMatplotlib">
+    <property name="title">
+     <string>Matplotlib</string>
+    </property>
+    <addaction name="actionplot"/>
+    <addaction name="separator"/>
+    <addaction name="actionscatter"/>
+    <addaction name="separator"/>
+    <addaction name="actionpie"/>
+    <addaction name="separator"/>
+    <addaction name="actionbar"/>
+    <addaction name="separator"/>
+    <addaction name="actionbarh"/>
+    <addaction name="separator"/>
+    <addaction name="actionhist"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuScientific_computation">
+    <property name="title">
+     <string>Scientific computation</string>
+    </property>
+    <addaction name="actionadd"/>
+    <addaction name="separator"/>
+    <addaction name="actionradd"/>
+    <addaction name="separator"/>
+    <addaction name="actionsub"/>
+    <addaction name="separator"/>
+    <addaction name="actionrsub"/>
+    <addaction name="separator"/>
+    <addaction name="actiondiv"/>
+    <addaction name="separator"/>
+    <addaction name="actionrdiv"/>
+    <addaction name="separator"/>
+    <addaction name="actionfloordiv"/>
+    <addaction name="separator"/>
+    <addaction name="actionrfloordiv"/>
+    <addaction name="separator"/>
+    <addaction name="actionpow"/>
+    <addaction name="separator"/>
+    <addaction name="actionrpow"/>
+    <addaction name="separator"/>
+    <addaction name="actioncorr"/>
+    <addaction name="separator"/>
+    <addaction name="actioncov"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuQuick_operation"/>
+   <addaction name="menuSelect"/>
+   <addaction name="menuScientific_computation"/>
+   <addaction name="menuMatplotlib"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_file">
+   <property name="text">
+    <string>Open_file</string>
+   </property>
+  </action>
+  <action name="actionas_a_Csv_File">
+   <property name="text">
+    <string>as a Csv file</string>
+   </property>
+  </action>
+  <action name="actionas_a_Excel_file">
+   <property name="text">
+    <string>as a Excel file</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionDelete_problematic_rows">
+   <property name="text">
+    <string>Delete problematic rows</string>
+   </property>
+  </action>
+  <action name="actionDelete_problematic_columns">
+   <property name="text">
+    <string>Delete problematic columns</string>
+   </property>
+  </action>
+  <action name="actionDelete_duplicate_values">
+   <property name="text">
+    <string>Delete duplicate values</string>
+   </property>
+  </action>
+  <action name="actionUpdating_all_the_Windows">
+   <property name="text">
+    <string>Updating all the Windows</string>
+   </property>
+  </action>
+  <action name="actionplot">
+   <property name="text">
+    <string>plot                             </string>
+   </property>
+  </action>
+  <action name="actionread_only">
+   <property name="text">
+    <string>read only</string>
+   </property>
+  </action>
+  <action name="actioninplace">
+   <property name="text">
+    <string>inplace</string>
+   </property>
+  </action>
+  <action name="actionFill_problematic_columns_with">
+   <property name="text">
+    <string>Fill problematic columns with...</string>
+   </property>
+  </action>
+  <action name="actionadd">
+   <property name="text">
+    <string>add</string>
+   </property>
+  </action>
+  <action name="actionradd">
+   <property name="text">
+    <string>radd</string>
+   </property>
+  </action>
+  <action name="actionsub">
+   <property name="text">
+    <string>sub</string>
+   </property>
+  </action>
+  <action name="actionrsub">
+   <property name="text">
+    <string>rsub</string>
+   </property>
+  </action>
+  <action name="actiondiv">
+   <property name="text">
+    <string>div</string>
+   </property>
+  </action>
+  <action name="actionrdiv">
+   <property name="text">
+    <string>rdiv</string>
+   </property>
+  </action>
+  <action name="actionfloordiv">
+   <property name="text">
+    <string>floordiv</string>
+   </property>
+  </action>
+  <action name="actionrfloordiv">
+   <property name="text">
+    <string>rfloordiv</string>
+   </property>
+  </action>
+  <action name="actionpow">
+   <property name="text">
+    <string>pow</string>
+   </property>
+  </action>
+  <action name="actionrpow">
+   <property name="text">
+    <string>rpow</string>
+   </property>
+  </action>
+  <action name="actionForced_type_Conversion">
+   <property name="text">
+    <string>Forced type Conversion</string>
+   </property>
+  </action>
+  <action name="actionscatter">
+   <property name="text">
+    <string>scatter                        </string>
+   </property>
+  </action>
+  <action name="actionpie">
+   <property name="text">
+    <string>pie                         </string>
+   </property>
+  </action>
+  <action name="actionbar">
+   <property name="text">
+    <string>bar</string>
+   </property>
+  </action>
+  <action name="actionbarh">
+   <property name="text">
+    <string>barh</string>
+   </property>
+  </action>
+  <action name="actionhist">
+   <property name="text">
+    <string>hist</string>
+   </property>
+  </action>
+  <action name="actioncorr">
+   <property name="text">
+    <string>corr</string>
+   </property>
+  </action>
+  <action name="actioncov">
+   <property name="text">
+    <string>cov</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DataTableWidget</class>
+   <extends>QWidget</extends>
+   <header>qtpandas.views.DataTableView</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../qrc/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
